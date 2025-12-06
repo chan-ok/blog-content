@@ -1,5 +1,19 @@
 [
   {
+    "id": "blog-development-log",
+    "title": "블로그 개발 일지",
+    "createdAt": "2025-12-07T05:00:00.000Z",
+    "tags": [
+      "blog",
+      "회고"
+    ],
+    "published": true,
+    "updatedAt": "2025-12-07T05:00:00.000Z",
+    "path": [
+      "blog-development-log"
+    ]
+  },
+  {
     "id": "git branch - write",
     "title": "개발 브랜치 - write",
     "createdAt": "2025/12/07",
