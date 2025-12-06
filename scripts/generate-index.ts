@@ -24,7 +24,7 @@ function getAllMdxFiles(dir: string): string[] {
     if (stat.isDirectory()) {
       // 재귀적으로 하위 폴더 탐색
       results.push(...getAllMdxFiles(fullPath));
-    } else if (item.endsWith(".mdx")) {
+    } else if (item.endsWith(".mdx") || item.endsWith(".md")) {
       results.push(fullPath);
     }
   }
@@ -34,7 +34,7 @@ function getAllMdxFiles(dir: string): string[] {
 
 export default function generateIndexJson(locale: "ko" | "en" | "ja") {
   console.log(`Generating ${locale}/index/.json...`);
-  const postsPath = path.join(process.cwd(), locale, "posts");
+  const postsPath = path.join(process.cwd(), locale);
 
   const mdxFiles = getAllMdxFiles(postsPath);
   console.log("Found mdx files: ", mdxFiles.length);
@@ -43,12 +43,12 @@ export default function generateIndexJson(locale: "ko" | "en" | "ja") {
     .map((filePath) => {
       const content = fs.readFileSync(filePath, "utf-8");
       const frontmatter = matter(content).data;
-      const id = path.relative(postsPath, filePath).replace(/\.mdx?$/, "");
+      const id = path.relative(postsPath, filePath).replace(/\.md(x)?$/, "");
 
       return {
-        id,
+        id: id.split("/").join("_"),
         ...frontmatter,
-        path: "/posts/" + id,
+        path: id,
       } as unknown as Post;
     })
     .toSorted(
