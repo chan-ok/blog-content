@@ -4,7 +4,7 @@
   "description": "Blog contents repository",
   "type": "module",
   "scripts": {
-    "generate-index": "tsx scripts/generate-index.ts"
+    "indexing": "tsx scripts/generate-index.ts"
   },
   "dependencies": {
     "gray-matter": "^4.0.3"
