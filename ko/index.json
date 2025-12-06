@@ -21,13 +21,14 @@
       "obsidian",
       "git"
     ],
-    "published": true,
+    "published": false,
+    "updatedAt": "2025-12-07T05:48:00.000Z",
     "path": [
       "git branch - write"
     ]
   },
   {
-    "id": "옵시디언에서 작성됨",
+    "id": "created-by-obsidian",
     "title": "옵시디언에서 작성됨",
     "createdAt": "2025/12/06",
     "tags": [
@@ -35,20 +36,21 @@
       "test"
     ],
     "published": true,
+    "updatedAt": "2025-12-07T05:48:00.000Z",
     "path": [
-      "옵시디언에서 작성됨"
+      "created-by-obsidian"
     ]
   },
   {
     "id": "more_test2",
     "title": "테스트 포스트3",
     "createdAt": "2025-12-03T00:00:00.000Z",
-    "updatedAt": "2025-12-03T00:00:00.000Z",
+    "updatedAt": "2025-12-07T00:00:00.000Z",
     "tags": [
       "test",
       "plain"
     ],
-    "published": true,
+    "published": false,
     "path": [
       "more",
       "test2"
@@ -58,7 +60,7 @@
     "id": "more_test1",
     "title": "테스트 포스트",
     "createdAt": "2025-12-02T00:00:00.000Z",
-    "updatedAt": "2025-12-02T00:00:00.000Z",
+    "updatedAt": "2025-12-07T00:00:00.000Z",
     "tags": [
       "test",
       "plain"
@@ -84,18 +86,18 @@
     ]
   },
   {
-    "id": "more_test4",
+    "id": "more_test3",
     "title": "테스트 포스트4",
     "createdAt": "2025-11-24T00:00:00.000Z",
-    "updatedAt": "2025-11-24T00:00:00.000Z",
+    "updatedAt": "2025-12-07T00:00:00.000Z",
     "tags": [
       "test",
       "plain"
     ],
-    "published": true,
+    "published": false,
     "path": [
       "more",
-      "test4"
+      "test3"
     ]
   }
 ]
