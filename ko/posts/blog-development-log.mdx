@@ -1,0 +1,41 @@
+---
+title: 블로그 개발 일지
+createdAt: 2025-12-07T05:00:00
+tags:
+  - blog
+  - 회고
+published: true
+updatedAt: 2025-12-07T05:00:00
+---
+
+### 12.04 ~ 05
+
+- 포스트 인덱싱 로직 작성
+- 인덱싱 json으로부터 페이지네이션 처리하는 로직 작성
+    - 페이지네이션
+    - 태그 필터
+    - 생성일 기준 정렬
+- 폴더 구조 정리
+
+## 정리할 내용
+
+- 마크다운 설정 (mdx, remark, rehype, gray-matter)
+- 기술스택 선정 과정 및 시행착오
+    - lint, formatter, testing, css styling, typescript, react, nextjs (tanstack)
+    - axios, fetch, tanstack query?
+- 기본 레이아웃
+    - 푸터를 하단에 붙이기
+    - 헤더를 스크롤에 반응형으로
+- 이메일 폼 작성 (+ 로봇 방지 turnstile)
+    - turnstile 활성화를 위해 gabia로부터 cloudflare로 이전
+- 도중에 react server component의 취약성 으로 인해 버전 업그레이드
+    - react 19.2.1 / nextjs16.0.7
+
+## 추후 예정
+
+- 테마 설정 토글
+- 언어 설정 토글
+- content 관리용 프로젝트를 분리
+    - 블로그 프로젝트 (netlify에 자동 배포 / 포스트 프로젝트 인덱싱 파일을 읽어와서 출력)
+        - 블로그 프로젝트에서 포스트를 가져올때 axios + tanstack query를 사용하기
+    - 포스트 프로젝트 (obsidian으로 작성 / github에 올리면 netlify에서 인덱싱 파일 생성 후 배포)
