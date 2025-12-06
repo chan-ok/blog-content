@@ -1,5 +1,9 @@
 package-lock.json
 node_modules
 .obsidian/**/*
+.makemd
 .makemd/**/*
+.makemd/**/*.mdc
 .space/**/*
+.trash
+Vault.md
