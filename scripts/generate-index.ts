@@ -8,7 +8,7 @@ type Post = {
   summary: string;
   createdAt: string;
   tags: string[];
-  path: string;
+  path: string[];
   published: boolean;
   updatedAt?: string | undefined;
 };
@@ -43,12 +43,15 @@ export default function generateIndexJson(locale: "ko" | "en" | "ja") {
     .map((filePath) => {
       const content = fs.readFileSync(filePath, "utf-8");
       const frontmatter = matter(content).data;
-      const id = path.relative(postsPath, filePath).replace(/\.md(x)?$/, "");
+      const pathArray = path
+        .relative(postsPath, filePath)
+        .replace(/\.md(x)?$/, "")
+        .split("/");
 
       return {
-        id: id.split("/").join("_"),
+        id: pathArray.join("_"),
         ...frontmatter,
-        path: id,
+        path: pathArray,
       } as unknown as Post;
     })
     .toSorted(
