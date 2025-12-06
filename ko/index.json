@@ -1,12 +1,6 @@
 [
   {
-    "id": "about",
-    "path": [
-      "about"
-    ]
-  },
-  {
-    "id": "posts_more_test2",
+    "id": "more_test2",
     "title": "테스트 포스트3",
     "createdAt": "2025-12-03T00:00:00.000Z",
     "updatedAt": "2025-12-03T00:00:00.000Z",
@@ -16,13 +10,12 @@
     ],
     "published": true,
     "path": [
-      "posts",
       "more",
       "test2"
     ]
   },
   {
-    "id": "posts_more_test1",
+    "id": "more_test1",
     "title": "테스트 포스트",
     "createdAt": "2025-12-02T00:00:00.000Z",
     "updatedAt": "2025-12-02T00:00:00.000Z",
@@ -32,13 +25,12 @@
     ],
     "published": false,
     "path": [
-      "posts",
       "more",
       "test1"
     ]
   },
   {
-    "id": "posts_github-style",
+    "id": "github-style",
     "title": "Github format",
     "createdAt": "2025-12-01T00:00:00.000Z",
     "updatedAt": "2025-12-01T00:00:00.000Z",
@@ -48,12 +40,11 @@
     ],
     "published": true,
     "path": [
-      "posts",
       "github-style"
     ]
   },
   {
-    "id": "posts_more_test4",
+    "id": "more_test4",
     "title": "테스트 포스트4",
     "createdAt": "2025-11-24T00:00:00.000Z",
     "updatedAt": "2025-11-24T00:00:00.000Z",
@@ -63,7 +54,6 @@
     ],
     "published": true,
     "path": [
-      "posts",
       "more",
       "test4"
     ]

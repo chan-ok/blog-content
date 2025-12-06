@@ -34,7 +34,7 @@ function getAllMdxFiles(dir: string): string[] {
 
 export default function generateIndexJson(locale: "ko" | "en" | "ja") {
   console.log(`Generating ${locale}/index/.json...`);
-  const postsPath = path.join(process.cwd(), locale);
+  const postsPath = path.join(process.cwd(), locale, "posts");
 
   const mdxFiles = getAllMdxFiles(postsPath);
   console.log("Found mdx files: ", mdxFiles.length);
