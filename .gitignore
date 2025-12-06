@@ -1,1 +1,6 @@
+package-lock.json
+node_modules
 .obsidian
+ja/index.json
+ko/index.json
+en/index.json

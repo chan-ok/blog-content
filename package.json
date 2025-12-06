@@ -1,0 +1,16 @@
+{
+  "name": "blog-contents",
+  "version": "1.0.0",
+  "description": "Blog contents repository",
+  "type": "module",
+  "scripts": {
+    "generate-index": "tsx scripts/generate-index.ts"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "@types/node": "^20.11.0"
+  }
+}
