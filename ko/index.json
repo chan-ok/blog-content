@@ -1,5 +1,18 @@
 [
   {
+    "id": "옵시디언에서 작성됨",
+    "title": null,
+    "createdAt": "2025/12/06",
+    "tags": [
+      "obsidian",
+      "test"
+    ],
+    "published": true,
+    "path": [
+      "옵시디언에서 작성됨"
+    ]
+  },
+  {
     "id": "more_test2",
     "title": "테스트 포스트3",
     "createdAt": "2025-12-03T00:00:00.000Z",
