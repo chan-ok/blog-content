@@ -30,8 +30,3 @@ I value making decisions from the user's perspective and pursue intuitive, maint
 ### Tools
 
 ![My Skills](https://skillicons.dev/icons?i=vscode,idea,git,github,gitlab,notion,md,netlify)
-
-<!--
-```javascript
-const test = 'test';
-``` -->
