@@ -1,30 +1,17 @@
 [
   {
-    "id": "blog-development-log",
+    "id": "blog-develop-log_blog-development-log-draft",
     "title": "블로그 개발 일지",
     "createdAt": "2025-12-07T05:00:00.000Z",
     "tags": [
       "blog",
       "회고"
     ],
-    "published": true,
-    "updatedAt": "2025-12-07T05:00:00.000Z",
-    "path": [
-      "blog-development-log"
-    ]
-  },
-  {
-    "id": "git branch - write",
-    "title": "개발 브랜치 - write",
-    "createdAt": "2025/12/07",
-    "tags": [
-      "obsidian",
-      "git"
-    ],
     "published": false,
-    "updatedAt": "2025-12-07T05:48:00.000Z",
+    "updatedAt": "2025-12-10T12:00:00.000Z",
     "path": [
-      "git branch - write"
+      "blog-develop-log",
+      "blog-development-log-draft"
     ]
   },
   {
@@ -35,69 +22,10 @@
       "obsidian",
       "test"
     ],
-    "published": true,
+    "published": false,
     "updatedAt": "2025-12-07T05:48:00.000Z",
     "path": [
       "created-by-obsidian"
-    ]
-  },
-  {
-    "id": "more_test2",
-    "title": "테스트 포스트3",
-    "createdAt": "2025-12-03T00:00:00.000Z",
-    "updatedAt": "2025-12-07T00:00:00.000Z",
-    "tags": [
-      "test",
-      "plain"
-    ],
-    "published": false,
-    "path": [
-      "more",
-      "test2"
-    ]
-  },
-  {
-    "id": "more_test1",
-    "title": "테스트 포스트",
-    "createdAt": "2025-12-02T00:00:00.000Z",
-    "updatedAt": "2025-12-07T00:00:00.000Z",
-    "tags": [
-      "test",
-      "plain"
-    ],
-    "published": false,
-    "path": [
-      "more",
-      "test1"
-    ]
-  },
-  {
-    "id": "github-style",
-    "title": "Github format",
-    "createdAt": "2025-12-01T00:00:00.000Z",
-    "updatedAt": "2025-12-01T00:00:00.000Z",
-    "tags": [
-      "test",
-      "github"
-    ],
-    "published": true,
-    "path": [
-      "github-style"
-    ]
-  },
-  {
-    "id": "more_test3",
-    "title": "테스트 포스트4",
-    "createdAt": "2025-11-24T00:00:00.000Z",
-    "updatedAt": "2025-12-07T00:00:00.000Z",
-    "tags": [
-      "test",
-      "plain"
-    ],
-    "published": false,
-    "path": [
-      "more",
-      "test3"
     ]
   }
 ]
