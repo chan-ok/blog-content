@@ -1,5 +1,27 @@
 [
   {
+    "id": "ai-doodle_ai-doodle",
+    "path": [
+      "ai-doodle",
+      "ai-doodle"
+    ]
+  },
+  {
+    "id": "ai-doodle_develop-with-ai",
+    "title": "AI와 함께 개발을 시도한 경험",
+    "createdAt": "2025-12-12T08:12:00.000Z",
+    "updatedAt": null,
+    "tags": [
+      "회고",
+      "AI"
+    ],
+    "published": false,
+    "path": [
+      "ai-doodle",
+      "develop-with-ai"
+    ]
+  },
+  {
     "id": "blog-develop-log_blog-development-log-draft",
     "title": "블로그 개발 일지",
     "createdAt": "2025-12-07T05:00:00.000Z",
@@ -15,6 +37,13 @@
     ]
   },
   {
+    "id": "blog-develop-log_todo",
+    "path": [
+      "blog-develop-log",
+      "todo"
+    ]
+  },
+  {
     "id": "created-by-obsidian",
     "title": "옵시디언에서 작성됨",
     "createdAt": "2025/12/06",
@@ -26,6 +55,12 @@
     "updatedAt": "2025-12-07T05:48:00.000Z",
     "path": [
       "created-by-obsidian"
+    ]
+  },
+  {
+    "id": "posts",
+    "path": [
+      "posts"
     ]
   }
 ]
