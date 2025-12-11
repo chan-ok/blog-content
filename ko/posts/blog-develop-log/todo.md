@@ -1,4 +1,6 @@
 # 할 일
+- [ ] 스크롤바 영역 고정으로 지정
+	- [ ] scrollbar-gutter: stable
 - [ ] 마크다운 파일명은 작성 시 편리하게 언어로 유지하고, frontmatter에 고유ID를 지정, URL은 고유ID로 인덱싱
 - [ ] TOC 플러그인 및 UI 개발
 - [ ] 읽기 시간 계산 및 index.json에 저장
