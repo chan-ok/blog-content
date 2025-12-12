@@ -1,13 +1,6 @@
 [
   {
-    "id": "ai-doodle_ai-doodle",
-    "path": [
-      "ai-doodle",
-      "ai-doodle"
-    ]
-  },
-  {
-    "id": "ai-doodle_develop-with-ai",
+    "id": "develop-with-ai",
     "title": "AI와 함께 개발을 시도한 경험",
     "createdAt": "2025-12-12T08:12:00.000Z",
     "updatedAt": null,
@@ -18,11 +11,23 @@
     "published": false,
     "path": [
       "ai-doodle",
-      "develop-with-ai"
+      "AI와 함께 개발을 시도한 경험"
     ]
   },
   {
-    "id": "blog-develop-log_blog-development-log-draft",
+    "path": [
+      "ai-doodle",
+      "ai-doodle"
+    ]
+  },
+  {
+    "path": [
+      "blog-develop-log",
+      "todo"
+    ]
+  },
+  {
+    "id": "blog-development-log-draft",
     "title": "블로그 개발 일지",
     "createdAt": "2025-12-07T05:00:00.000Z",
     "updatedAt": "2025-12-10T12:00:00.000Z",
@@ -33,34 +38,26 @@
     "published": false,
     "path": [
       "blog-develop-log",
-      "blog-development-log-draft"
+      "블로그 개발 일지"
     ]
   },
   {
-    "id": "blog-develop-log_todo",
     "path": [
-      "blog-develop-log",
-      "todo"
+      "posts"
     ]
   },
   {
     "id": "created-by-obsidian",
     "title": "옵시디언에서 작성됨",
-    "createdAt": "2025/12/06",
+    "createdAt": "2025-12-06T00:00:00.000Z",
     "updatedAt": "2025-12-07T05:48:00.000Z",
     "tags": [
       "obsidian",
       "test"
     ],
-    "published": false,
+    "published": true,
     "path": [
-      "created-by-obsidian"
-    ]
-  },
-  {
-    "id": "posts",
-    "path": [
-      "posts"
+      "옵시디언에서 작성됨"
     ]
   }
 ]
