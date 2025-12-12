@@ -3,14 +3,15 @@ import fs from "node:fs";
 import path from "node:path";
 
 type Post = {
-  id: number;
+  id: string;
   title: string;
-  summary: string;
+  thumbnail?: string;
+  summary?: string;
   createdAt: string;
+  updatedAt?: string;
   tags: string[];
   path: string[];
   published: boolean;
-  updatedAt?: string | undefined;
 };
 
 function getAllMdxFiles(dir: string): string[] {
@@ -49,12 +50,11 @@ export default function generateIndexJson(locale: "ko" | "en" | "ja") {
         .split("/");
 
       return {
-        id: pathArray.join("_"),
         ...frontmatter,
         path: pathArray,
       } as unknown as Post;
     })
-    .toSorted(
+    .sort(
       (a, b) =>
         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
