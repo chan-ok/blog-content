@@ -1,6 +1,6 @@
 [
   {
-    "id": "develop-with-ai",
+    "id": "AI와-함께-개발을-시도한-경험",
     "title": "AI와 함께 개발을 시도한 경험",
     "createdAt": "2025-12-12T08:12:00.000Z",
     "updatedAt": null,
@@ -9,25 +9,10 @@
       "AI"
     ],
     "published": false,
-    "path": [
-      "ai-doodle",
-      "AI와 함께 개발을 시도한 경험"
-    ]
+    "path": "ai-doodle/AI와 함께 개발을 시도한 경험.mdx"
   },
   {
-    "path": [
-      "ai-doodle",
-      "ai-doodle"
-    ]
-  },
-  {
-    "path": [
-      "blog-develop-log",
-      "todo"
-    ]
-  },
-  {
-    "id": "blog-development-log-draft",
+    "id": "블로그-개발-일지",
     "title": "블로그 개발 일지",
     "createdAt": "2025-12-07T05:00:00.000Z",
     "updatedAt": "2025-12-10T12:00:00.000Z",
@@ -36,18 +21,10 @@
       "회고"
     ],
     "published": false,
-    "path": [
-      "blog-develop-log",
-      "블로그 개발 일지"
-    ]
+    "path": "blog-develop-log/블로그 개발 일지.mdx"
   },
   {
-    "path": [
-      "posts"
-    ]
-  },
-  {
-    "id": "created-by-obsidian",
+    "id": "옵시디언에서-작성됨",
     "title": "옵시디언에서 작성됨",
     "createdAt": "2025-12-06T00:00:00.000Z",
     "updatedAt": "2025-12-07T05:48:00.000Z",
@@ -56,8 +33,6 @@
       "test"
     ],
     "published": true,
-    "path": [
-      "옵시디언에서 작성됨"
-    ]
+    "path": "옵시디언에서 작성됨.mdx"
   }
 ]
