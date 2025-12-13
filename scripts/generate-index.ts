@@ -11,7 +11,7 @@ type Post = {
   createdAt: string;
   updatedAt?: string;
   tags: string[];
-  path: string[];
+  path: string;
   published: boolean;
 };
 
