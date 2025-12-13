@@ -7,10 +7,11 @@
     "indexing": "tsx scripts/generate-index.ts"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3"
   },
   "devDependencies": {
-    "tsx": "^4.7.0",
-    "@types/node": "^20.11.0"
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0"
   }
 }

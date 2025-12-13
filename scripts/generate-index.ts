@@ -1,6 +1,7 @@
+import { compareDesc } from "date-fns";
 import matter from "gray-matter";
 import fs from "node:fs";
-import path from "node:path";
+import nodePath from "node:path";
 
 type Post = {
   id: string;
@@ -19,7 +20,7 @@ function getAllMdxFiles(dir: string): string[] {
   const items = fs.readdirSync(dir);
 
   for (const item of items) {
-    const fullPath = path.join(dir, item);
+    const fullPath = nodePath.join(dir, item);
     const stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
@@ -33,42 +34,50 @@ function getAllMdxFiles(dir: string): string[] {
   return results;
 }
 
-export default function generateIndexJson(locale: "ko" | "en" | "ja") {
-  console.log(`Generating ${locale}/index/.json...`);
-  const postsPath = path.join(process.cwd(), locale, "posts");
+(() => {
+  for (const locale of ["ko", "en", "ja"]) {
+    console.log(`Generating ${locale}/index/.json...`);
+    const postsPath = nodePath.join(process.cwd(), locale, "posts");
 
-  const mdxFiles = getAllMdxFiles(postsPath);
-  console.log("Found mdx files: ", mdxFiles.length);
+    const mdxFiles = getAllMdxFiles(postsPath);
+    console.log("Found mdx files: ", mdxFiles.length);
 
-  const posts = mdxFiles
-    .map((filePath) => {
-      const content = fs.readFileSync(filePath, "utf-8");
-      const frontmatter = matter(content).data;
-      const pathArray = path
-        .relative(postsPath, filePath)
-        .replace(/\.md(x)?$/, "")
-        .split("/");
+    const posts = mdxFiles
+      .map((filePath) => {
+        const content = fs.readFileSync(filePath, "utf-8");
+        const frontmatter = matter(content).data;
+        return {
+          filePath,
+          frontmatter,
+        };
+      })
+      .filter(({ frontmatter }) => !!frontmatter.id)
+      .map(({ filePath, frontmatter }) => {
+        const pathArray = nodePath.relative(postsPath, filePath).split("/");
+        const title = pathArray.at(-1)?.replace(/\.md(x)?$/, "") ?? "";
+        const id = title.split(" ").join("-");
 
-      return {
-        ...frontmatter,
-        path: pathArray,
-      } as unknown as Post;
-    })
-    .sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        // 파일명을 제외한 폴더까지의 경로 + 파일 frontmatter-id
+
+        return {
+          ...frontmatter,
+          id,
+          title,
+          path: pathArray.join("/"),
+        } as unknown as Post;
+      })
+      .sort((a, b) => compareDesc(a.createdAt, b.createdAt));
+
+    if (posts.length > 0) {
+      console.log("--> post[0]:", posts[0]);
+    }
+
+    // save ${locale}/index.json
+    fs.writeFileSync(
+      nodePath.join(process.cwd(), `${locale}/index.json`),
+      JSON.stringify(posts, null, 2)
     );
-  console.log("Generated posts:", posts);
 
-  // save ${locale}/index.json
-  fs.writeFileSync(
-    path.join(process.cwd(), `${locale}/index.json`),
-    JSON.stringify(posts, null, 2)
-  );
-
-  console.log(`✅ ${locale}/index.json created successfully!\n`);
-}
-
-generateIndexJson("ko");
-generateIndexJson("en");
-generateIndexJson("ja");
+    console.log(`✅ ${locale}/index.json created successfully!\n`);
+  }
+})();
