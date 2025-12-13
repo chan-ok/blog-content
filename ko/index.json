@@ -1,38 +1,43 @@
 [
   {
-    "id": "AI와-함께-개발을-시도한-경험",
     "title": "AI와 함께 개발을 시도한 경험",
-    "createdAt": "2025-12-12T08:12:00.000Z",
-    "updatedAt": null,
+    "path": [
+      "ai-doodle",
+      "AI와-함께-개발을-시도한-경험"
+    ],
     "tags": [
       "회고",
       "AI"
     ],
-    "published": false,
-    "path": "ai-doodle/AI와 함께 개발을 시도한 경험.mdx"
+    "createdAt": "2025-12-12T08:12:00.000Z",
+    "updatedAt": null,
+    "published": false
   },
   {
-    "id": "블로그-개발-일지",
     "title": "블로그 개발 일지",
-    "createdAt": "2025-12-07T05:00:00.000Z",
-    "updatedAt": "2025-12-10T12:00:00.000Z",
+    "path": [
+      "blog-develop-log",
+      "블로그-개발-일지"
+    ],
     "tags": [
       "blog",
       "회고"
     ],
-    "published": false,
-    "path": "blog-develop-log/블로그 개발 일지.mdx"
+    "createdAt": "2025-12-07T05:00:00.000Z",
+    "updatedAt": "2025-12-10T12:00:00.000Z",
+    "published": false
   },
   {
-    "id": "옵시디언에서-작성됨",
     "title": "옵시디언에서 작성됨",
-    "createdAt": "2025-12-06T00:00:00.000Z",
-    "updatedAt": "2025-12-07T05:48:00.000Z",
+    "path": [
+      "옵시디언에서-작성됨"
+    ],
     "tags": [
       "obsidian",
       "test"
     ],
-    "published": true,
-    "path": "옵시디언에서 작성됨.mdx"
+    "createdAt": "2025-12-06T00:00:00.000Z",
+    "updatedAt": "2025-12-07T05:48:00.000Z",
+    "published": true
   }
 ]

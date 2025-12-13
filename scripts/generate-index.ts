@@ -4,15 +4,14 @@ import fs from "node:fs";
 import nodePath from "node:path";
 
 type Post = {
-  id: string;
   title: string;
-  thumbnail?: string;
-  summary?: string;
   createdAt: string;
   updatedAt?: string;
   tags: string[];
-  path: string;
+  path: string[];
   published: boolean;
+  thumbnail?: string;
+  summary?: string;
 };
 
 function getAllMdxFiles(dir: string): string[] {
@@ -26,7 +25,7 @@ function getAllMdxFiles(dir: string): string[] {
     if (stat.isDirectory()) {
       // 재귀적으로 하위 폴더 탐색
       results.push(...getAllMdxFiles(fullPath));
-    } else if (item.endsWith(".mdx") || item.endsWith(".md")) {
+    } else if (item.endsWith(".mdx")) {
       results.push(fullPath);
     }
   }
@@ -47,23 +46,19 @@ function getAllMdxFiles(dir: string): string[] {
         const content = fs.readFileSync(filePath, "utf-8");
         const frontmatter = matter(content).data;
         return {
-          filePath,
+          filePath: filePath.replace(/\.mdx$/, ""),
           frontmatter,
         };
       })
-      .filter(({ frontmatter }) => !!frontmatter.id)
       .map(({ filePath, frontmatter }) => {
         const pathArray = nodePath.relative(postsPath, filePath).split("/");
-        const title = pathArray.at(-1)?.replace(/\.md(x)?$/, "") ?? "";
-        const id = title.split(" ").join("-");
-
-        // 파일명을 제외한 폴더까지의 경로 + 파일 frontmatter-id
+        const title = pathArray.at(-1) ?? "";
+        const path = pathArray.slice(0, -1).concat(title.split(" ").join("-"));
 
         return {
-          ...frontmatter,
-          id,
           title,
-          path: pathArray.join("/"),
+          path,
+          ...frontmatter,
         } as unknown as Post;
       })
       .sort((a, b) => compareDesc(a.createdAt, b.createdAt));
