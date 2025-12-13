@@ -11,7 +11,7 @@ type Post = {
   createdAt: string;
   updatedAt?: string;
   tags: string[];
-  path: string[];
+  path: string;
   published: boolean;
 };
 
@@ -36,8 +36,8 @@ function getAllMdxFiles(dir: string): string[] {
 
 (() => {
   for (const locale of ["ko", "en", "ja"]) {
-    console.log(`Generating ${locale}/index/.json...`);
-    const postsPath = nodePath.join(process.cwd(), locale, "posts");
+    console.log(`Generating ${locale}/index.json...`);
+    const postsPath = nodePath.join(process.cwd(), locale);
 
     const mdxFiles = getAllMdxFiles(postsPath);
     console.log("Found mdx files: ", mdxFiles.length);
