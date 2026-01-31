@@ -1,5 +1,19 @@
 [
   {
+    "title": "AI시대에서 개발자 블로그가 필요할까",
+    "path": [
+      "블로그-개발",
+      "AI시대에서-개발자-블로그가-필요할까"
+    ],
+    "tags": [
+      "blog",
+      "회고"
+    ],
+    "createdAt": "2026-01-31T21:45:00.000Z",
+    "updatedAt": "2026-01-31T21:45:00.000Z",
+    "published": true
+  },
+  {
     "title": "AI와 함께 개발을 시도한 경험",
     "path": [
       "ai-doodle",
@@ -25,7 +39,7 @@
     ],
     "createdAt": "2025-12-07T05:00:00.000Z",
     "updatedAt": "2025-12-10T12:00:00.000Z",
-    "published": true
+    "published": false
   },
   {
     "title": "옵시디언에서 작성됨",
@@ -38,6 +52,6 @@
     ],
     "createdAt": "2025-12-06T00:00:00.000Z",
     "updatedAt": "2025-12-16T13:38:00.000Z",
-    "published": true
+    "published": false
   }
 ]
