@@ -2,6 +2,7 @@ import { compareDesc } from "date-fns";
 import matter from "gray-matter";
 import fs from "node:fs";
 import nodePath from "node:path";
+import { extractThumbnail } from "./extractThumbnail.js";
 
 type Post = {
   title: string;
@@ -43,22 +44,27 @@ function getAllMdxFiles(dir: string): string[] {
 
     const posts = mdxFiles
       .map((filePath) => {
-        const content = fs.readFileSync(filePath, "utf-8");
-        const frontmatter = matter(content).data;
+        const fileContent = fs.readFileSync(filePath, "utf-8");
+        const { data: frontmatter, content } = matter(fileContent);
         return {
           filePath: filePath.replace(/\.mdx$/, ""),
           frontmatter,
+          content,
         };
       })
-      .map(({ filePath, frontmatter }) => {
+      .map(({ filePath, frontmatter, content }) => {
         const pathArray = nodePath.relative(postsPath, filePath).split("/");
         const title = pathArray.at(-1) ?? "";
         const path = pathArray.slice(0, -1).concat(title.split(" ").join("-"));
+
+        // frontmatter에 thumbnail이 없으면 content에서 추출
+        const thumbnail = frontmatter.thumbnail || extractThumbnail(content) || undefined;
 
         return {
           title,
           path,
           ...frontmatter,
+          thumbnail,
         } as unknown as Post;
       })
       .sort((a, b) => compareDesc(a.createdAt, b.createdAt));
