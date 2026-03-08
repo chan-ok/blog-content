@@ -1,5 +1,19 @@
 [
   {
+    "title": "옵시디언에서 작성됨 - 2",
+    "path": [
+      "옵시디언에서-작성됨---2"
+    ],
+    "tags": [
+      "test"
+    ],
+    "createdAt": "2026-03-09T06:41:00.000Z",
+    "updatedAt": "1926-03-09T06:41:00.000Z",
+    "published": true,
+    "series": "시리즈 테스트",
+    "thumbnail": "images/codingless3r.png"
+  },
+  {
     "title": "AI시대에서 개발자 블로그가 필요할까",
     "path": [
       "블로그-개발",
@@ -28,17 +42,17 @@
     "published": false
   },
   {
-    "title": "옵시디언에서 작성됨",
+    "title": "옵시디언에서 작성됨 - 1",
     "path": [
-      "옵시디언에서-작성됨"
+      "옵시디언에서-작성됨---1"
     ],
     "tags": [
-      "obsidian",
       "test"
     ],
     "createdAt": "2025-12-06T00:00:00.000Z",
     "updatedAt": "2025-12-16T13:38:00.000Z",
     "published": true,
+    "series": "시리즈 테스트",
     "thumbnail": "images/codingless3r.png"
   }
 ]
