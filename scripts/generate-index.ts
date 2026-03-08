@@ -55,7 +55,7 @@ function getAllMdxFiles(dir: string): string[] {
       .map(({ filePath, frontmatter, content }) => {
         const pathArray = nodePath.relative(postsPath, filePath).split("/");
         const title = pathArray.at(-1) ?? "";
-        const path = pathArray.slice(0, -1).concat(title.split(" ").join("-"));
+        const path = pathArray.slice(0, -1).concat(title.split(" ").join("_"));
 
         // frontmatter에 thumbnail이 없으면 content에서 추출
         const thumbnail = frontmatter.thumbnail || extractThumbnail(content) || undefined;
