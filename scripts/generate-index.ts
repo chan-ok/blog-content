@@ -26,7 +26,7 @@ function getAllMdxFiles(dir: string): string[] {
     if (stat.isDirectory()) {
       // 재귀적으로 하위 폴더 탐색
       results.push(...getAllMdxFiles(fullPath));
-    } else if (item.endsWith(".mdx")) {
+    } else if (item.endsWith(".mdx") || item.endsWith(".md")) {
       results.push(fullPath);
     }
   }
@@ -40,14 +40,14 @@ function getAllMdxFiles(dir: string): string[] {
     const postsPath = nodePath.join(process.cwd(), locale);
 
     const mdxFiles = getAllMdxFiles(postsPath);
-    console.log("Found mdx files: ", mdxFiles.length);
+    console.log("Found mdx/md files: ", mdxFiles.length);
 
     const posts = mdxFiles
       .map((filePath) => {
         const fileContent = fs.readFileSync(filePath, "utf-8");
         const { data: frontmatter, content } = matter(fileContent);
         return {
-          filePath: filePath.replace(/\.mdx$/, ""),
+          filePath: filePath.replace(/\.mdx?$/, ""),
           frontmatter,
           content,
         };
